@@ -7,15 +7,15 @@ require "./lib/jd_jropen_sdk"
 # with your gem easier. You can also use a different console, if you like.
 
 JdJropenSdk.configure do |config|
-  config.app_id = ENV['JD_APP_ID']
-  config.partner_id = ENV['JD_PARTNER_ID']
-  config.tdes_key = ENV['JD_3DES_KEY']
-  config.md5_key = ENV['JD_MD5_KEY']
-  config.pfx_path = ENV['JD_PFX_PATH']
-  config.pfx_psw = ENV['JD_PFX_PSW']
-  config.jropen_cer_key = ENV['JD_JROPEN_CER_KEY']
-  config.sftp_host = ENV['JD_SFTP_HOST']
-  config.sftp_cert_path = ENV['JD_SFTP_CERT_PATH']
+  config.app_id = ENV["JD_APP_ID"]
+  config.partner_id = ENV["JD_PARTNER_ID"]
+  config.tdes_key = ENV["JD_3DES_KEY"]
+  config.md5_key = ENV["JD_MD5_KEY"]
+  config.pfx_path = ENV["JD_PFX_PATH"]
+  config.pfx_psw = ENV["JD_PFX_PSW"]
+  config.jropen_cer_key = ENV["JD_JROPEN_CER_KEY"]
+  config.sftp_host = ENV["JD_SFTP_HOST"]
+  config.sftp_cert_path = ENV["JD_SFTP_CERT_PATH"]
 end
 
 # (If you use this, don't forget to add pry to your Gemfile!)

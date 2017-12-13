@@ -1,7 +1,7 @@
 require "openssl"
 require "base64"
 require "json"
-require 'active_support/all'
+require "active_support/all"
 
 Dir["#{File.dirname(__FILE__)}/jd_jropen_sdk/*.rb"].each do |path|
   require path
