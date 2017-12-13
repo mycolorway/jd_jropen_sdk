@@ -1,5 +1,3 @@
-require "openssl"
-
 module JdJropenSdk
   class << self
     def configure(&block)

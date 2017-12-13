@@ -1,3 +1,5 @@
+require "rest-client"
+
 module JdJropenSdk
   module BaseService
     def post(path, body = {})

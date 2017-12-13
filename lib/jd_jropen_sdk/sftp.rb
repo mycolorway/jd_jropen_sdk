@@ -1,3 +1,5 @@
+require "net-sftp"
+
 module JdJropenSdk
   module Sftp
     include AksSignUtil
