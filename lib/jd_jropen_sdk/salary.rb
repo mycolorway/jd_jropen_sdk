@@ -1,6 +1,6 @@
 module JdJropenSdk
   module Salary
-    include BaseService
+    include JdJropenSdk::BaseService
     extend self
 
     def query_acc_info(partner_person_id)

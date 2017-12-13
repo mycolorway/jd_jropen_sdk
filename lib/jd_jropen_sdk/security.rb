@@ -1,6 +1,6 @@
 module JdJropenSdk
   module Security
-    include AksSignUtil
+    include JdJropenSdk::AksSignUtil
     extend self
 
     TRIPLEDES_ALGORITHM_MODE = "DES-EDE3".freeze

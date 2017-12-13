@@ -2,7 +2,7 @@ require "net/sftp"
 
 module JdJropenSdk
   module Sftp
-    include AksSignUtil
+    include JdJropenSdk::AksSignUtil
     extend self
 
     def encrypt_salary_file_upload(file_path, file_name, salary_str)

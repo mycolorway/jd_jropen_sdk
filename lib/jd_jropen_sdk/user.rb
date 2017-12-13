@@ -1,6 +1,6 @@
 module JdJropenSdk
   module User
-    include BaseService
+    include JdJropenSdk::BaseService
     extend self
 
     def query_cert_auth_status(partner_person_id)
