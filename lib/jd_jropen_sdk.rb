@@ -1,11 +1,19 @@
 require "openssl"
 require "base64"
 require "json"
-require "active_support/all"
 
-Dir["#{File.dirname(__FILE__)}/jd_jropen_sdk/*.rb"].each do |path|
-  require path
-end
+require "jd_jropen_sdk/version"
+require "jd_jropen_sdk/config"
+require "jd_jropen_sdk/aks_sign_util"
+require "jd_jropen_sdk/security"
+require "jd_jropen_sdk/common_request"
+require "jd_jropen_sdk/common_response"
+require "jd_jropen_sdk/base_service"
+require "jd_jropen_sdk/salary"
+require "jd_jropen_sdk/user"
+require "jd_jropen_sdk/async_message"
+require "jd_jropen_sdk/sftp"
+require "jd_jropen_sdk/hapi"
 
 module JdJropenSdk
   module SdkResponseCode
