@@ -1,4 +1,4 @@
-require "net-sftp"
+require "net/sftp"
 
 module JdJropenSdk
   module Sftp
