@@ -6,6 +6,8 @@ module JdJropenSdk
     TRIPLEDES_ALGORITHM_MODE = "DES-EDE3".freeze
 
     def encrypt(str)
+      raise SdkException.new :sdk_decrypt_fail, "Encrypt string must not be empty" if str.to_s.empty?
+
       cipher = OpenSSL::Cipher.new TRIPLEDES_ALGORITHM_MODE
       cipher.encrypt
       cipher.key = JdJropenSdk.tdes_key
@@ -16,6 +18,8 @@ module JdJropenSdk
     end
 
     def decrypt(str)
+      raise SdkException.new :sdk_decrypt_fail, "Decrypt string must not be empty" if str.to_s.empty?
+
       str = Base64.decode64 str.force_encoding("UTF-8")
       cipher = OpenSSL::Cipher.new TRIPLEDES_ALGORITHM_MODE
       cipher.key = JdJropenSdk.tdes_key
@@ -39,7 +43,7 @@ module JdJropenSdk
       case sign_type.to_s
       when "MD5"
         curr_sign = Digest::MD5.hexdigest(str + JdJropenSdk.md5_key)
-        curr_sign.upcase == sign.upcase
+        curr_sign.downcase == sign.downcase
       when "CERT"
         curr_sign = verify_envelop(sign)
         decrypt(curr_sign).downcase == str.downcase

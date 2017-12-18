@@ -5,10 +5,13 @@ module JdJropenSdk
     attr_accessor :response
 
     def initialize(request_params)
-      body_str = Security.decrypt request_params[:body]
+      if request_params[:header].to_s.empty? || request_params[:body].to_s.empty?
+        raise SdkException, :sdk_unsupport_msg_type
+      end
+
       @request = {
         header: JSON.parse(request_params[:header], object_class: HashWithIndifferentAccess),
-        body: JSON.parse(body_str, object_class: HashWithIndifferentAccess)
+        body: JSON.parse(Security.decrypt(request_params[:body]), object_class: HashWithIndifferentAccess)
       }
       @response = {}
     end
