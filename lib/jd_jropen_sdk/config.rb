@@ -18,10 +18,10 @@ module JdJropenSdk
   end
 
   class Config
-    API_HOST = "http://ft.jdpay.com".freeze
+    API_HOST = "https://ft.jdpay.com".freeze
     API_VERSION = "1.0.0".freeze
     ENCRYPT_TYPE = "3DES".freeze
-    H5_HOST = "http://ft.jdpay.com/hapi/sign/loginIn".freeze
+    H5_HOST = "https://ft.jdpay.com/hapi/sign/loginIn".freeze
 
     attr_accessor :app_id, :partner_id, :sdk_version, :api_version, :api_host, :h5_host,
                   :encrypt_type, :tdes_key, :md5_key, :pfx_path, :pfx_psw, :jropen_cer_key, :sftp_host, :sftp_cert_path,
@@ -33,7 +33,7 @@ module JdJropenSdk
       @api_host = API_HOST
       @h5_host = H5_HOST
       @encrypt_type = ENCRYPT_TYPE
-      @http_options = { verify_ssl: OpenSSL::SSL::VERIFY_NONE, open_timeout: 10 }
+      @http_options = { open_timeout: 10 }
     end
 
     def config_path=(config_path)
