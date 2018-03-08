@@ -20,6 +20,7 @@ module JdJropenSdk
   class Config
     API_HOST = "https://ft.jdpay.com".freeze
     API_VERSION = "1.0.0".freeze
+    SDK_VERSION = "1.0.1".freeze
     ENCRYPT_TYPE = "3DES".freeze
     H5_HOST = "https://ft.jdpay.com/hapi/sign/loginIn".freeze
 
@@ -28,7 +29,7 @@ module JdJropenSdk
                   :http_options, :config_path
 
     def initialize
-      @sdk_version = JdJropenSdk::VERSION
+      @sdk_version = SDK_VERSION
       @api_version = API_VERSION
       @api_host = API_HOST
       @h5_host = H5_HOST
