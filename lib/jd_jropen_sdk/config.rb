@@ -25,7 +25,7 @@ module JdJropenSdk
     H5_HOST = "https://ft.jdpay.com/hapi/sign/loginIn".freeze
 
     attr_accessor :app_id, :partner_id, :sdk_version, :api_version, :api_host, :h5_host,
-                  :encrypt_type, :tdes_key, :md5_key, :pfx_path, :pfx_psw, :jropen_cer_key, :sftp_host, :sftp_cert_path,
+                  :encrypt_type, :tdes_key, :sign_type, :md5_key, :pfx_path, :pfx_psw, :jropen_cer_key, :sftp_host, :sftp_cert_path,
                   :http_options, :config_path
 
     def initialize

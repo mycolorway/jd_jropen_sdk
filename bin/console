@@ -13,6 +13,7 @@ JdJropenSdk.configure do |config|
   config.app_id = ENV["JD_APP_ID"]
   config.partner_id = ENV["JD_PARTNER_ID"]
   config.tdes_key = ENV["JD_3DES_KEY"]
+  config.sign_type = ENV["JD_SIGN_TYPE"]
   config.md5_key = ENV["JD_MD5_KEY"]
   config.pfx_path = ENV["JD_PFX_PATH"]
   config.pfx_psw = ENV["JD_PFX_PSW"]
